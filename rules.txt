@@ -1,0 +1,8 @@
+RULES of the Repository:
+
+* All files should NOT have cyrillic names.
+* All stuff is hashed by years, then by schools
+  (use `git mv` to reoder files if necessary)
+* Ask mvel@ if you are not sure you're do your things right
+* TeX sources is preferred format. ODT is allowed.
+  Proprietary trash like doc/docx is NOT accepted.
