@@ -1,8 +1,25 @@
-RULES of the Repository:
+Reporitory Manifest and RULES
+
+* All contributions to this repo are highly appreciated!
 
 * All files should NOT have cyrillic names.
-* All stuff is hashed by years, then by schools
-  (use `git mv` to reoder files if necessary)
-* Ask mvel@ if you are not sure you're do your things right
+
+* Use '-' (dash) instead of '_' and spaces in file names.
+
+* All stuff is hashed by years, then by schools,
+  e.g. 2012/lesh/courses/course-2012-author.tex
+
+* Don't hestiate to use `git mv` to reoder files if necessary
+  and obey existing order and style guide
+
+* Course appropriate name format is:
+%{course-name}-%{year}-%{author-name}-%{author-surname}
+
 * TeX sources is preferred format. ODT is allowed.
   Proprietary trash like doc/docx is NOT accepted.
+
+* Don't hestiate to ask mvel@ (Mikhail Veltishchev)
+  by email dichlofos-mv@yandex.ru about all this stuff.
+  For most of the questions you'll get the answer
+  within a couple of hours. Please, try to do things
+  properly instead of doing them as you think
