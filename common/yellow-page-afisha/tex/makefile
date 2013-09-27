@@ -7,6 +7,10 @@ all:
 	latex afisha-a4-lr
 	dvips afisha-a4-lr
 	ps2pdf -sPAPERSIZE=a4 afisha-a4-lr.ps
+	# new sample by Natasha Skrobova
+	latex afisha-a4-right
+	dvips afisha-a4-right
+	ps2pdf -sPAPERSIZE=a4 afisha-a4-right.ps
 	#
 	latex astro-a5-lr
 	dvips astro-a5-lr
