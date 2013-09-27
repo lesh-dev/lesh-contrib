@@ -13,8 +13,8 @@ all:
 	pstops '2:0L@1(280mm,0cm)+0L@1(280mm,148.5mm)' astro-a5-lr.ps astrobooklet-a5-lr.ps
 	ps2pdf -sPAPERSIZE=a4 astrobooklet-a5-lr.ps
 	#
-	rm -rf ./result
 	mkdir -p ./result
+	rm -f ./result/*
 	mv *.pdf ./result/
 clean:
 	rm -f *~ *.aux *.dvi *.log *.ps *.pdf
