@@ -1,0 +1,3 @@
+# ignore PDF and PS files in current folder
+[^/]*.ps
+[^/]*.pdf
