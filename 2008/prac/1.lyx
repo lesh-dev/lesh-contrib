@@ -1,0 +1,330 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Задача 1.
+ Физический маятник
+\end_layout
+
+\begin_layout Date
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Математическим маятником называется материальная точка, подвешенная на невесомой
+ нерастяжимой нити длиной 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Период колебаний математического маятника 
+\begin_inset Formula \[
+T=2\pi\sqrt{\frac{l}{g}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если материпльную точку заменить телом конечных размеров (его на обязательно
+ подвешивать на нитке, можно за дырочку в самом теле), то получится физический
+ маятник.
+ Период его колебаний можно представить в виде
+\begin_inset Formula \[
+T=2\pi\sqrt{\frac{\tilde{l}}{g}},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $\tilde{l}$
+\end_inset
+
+ - так называемая приведённая длина.
+\end_layout
+
+\begin_layout Subsection*
+Простой вариант
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Если точка подвеса достаточно далеко от центра тяжести, то 
+\begin_inset Formula $\tilde{l}\approx l_{c}$
+\end_inset
+
+, где 
+\begin_inset Formula $l_{c}$
+\end_inset
+
+ - расстояние от точки подвеса до центра тяжести.
+ Предлагается измерить зависимость периода колебаний 
+\begin_inset Formula $T$
+\end_inset
+
+ от длины нити 
+\begin_inset Formula $l$
+\end_inset
+
+ и построить зависимость 
+\begin_inset Formula $T^{2}(l)$
+\end_inset
+
+.
+ Она должна иметь вид
+\begin_inset Formula \[
+T^{2}=\frac{4\pi^{2}}{g}(l+l_{0}),\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $l_{0}$
+\end_inset
+
+ - расстояние от точки крепления нити до центра масс.
+\end_layout
+
+\begin_layout Standard
+По данной зависимость определить положение центра тяжести.
+\end_layout
+
+\begin_layout Subsection*
+Сложный вариант 1
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+В общем случае приведённая длина равна
+\begin_inset Formula \[
+\tilde{l}=\frac{I}{ml_{c}},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $I$
+\end_inset
+
+ - момент инерции (относительно точки подвеса).
+ Если выразить момент инерции по теореме Гюйгенса-Штейнера, то получим
+\begin_inset Formula \[
+\tilde{l}=\frac{I_{0}+ml_{c}^{2}}{ml_{c}}=\frac{I_{0}}{ml_{c}}+l_{c}=\frac{I_{0}}{m\left(l+l_{0}\right)}+l+l_{0},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ - момент инерции относительно центра масс.
+ Видно, что при 
+\begin_inset Formula $l_{c}^{2}\gg\frac{I_{0}}{m}$
+\end_inset
+
+ 
+\begin_inset Formula $\tilde{l}\approx l_{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Предлагается снять зависимость 
+\begin_inset Formula $T(l)$
+\end_inset
+
+, построить 
+\begin_inset Formula $\tilde{l}(l)$
+\end_inset
+
+ и по этой зависимости определить 
+\begin_inset Formula $l_{0}$
+\end_inset
+
+ и 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $l_{0}$
+\end_inset
+
+ определяется так же, как в простом варианте, а 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ - из зависимости 
+\begin_inset Formula $\tilde{l}-l-l_{0}\left(\frac{1}{l+l_{0}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Сложный вариант 2
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Если нить заменить на проволоку с закреплённым концом, то её сила упругости
+ внесёт свой вклад в частоту колебаний:
+\begin_inset Formula \[
+\omega^{2}=\frac{g}{\tilde{l}}+\frac{1}{aml^{\alpha}},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $a$
+\end_inset
+
+ - некоторый коэффициент, зависящий от толщины проволоки и её модуля Юнга,
+ 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+ - неизвестный показатель степени
+\shape italic
+\size tiny
+, в теории равный 3
+\shape default
+\size default
+.
+\end_layout
+
+\begin_layout Standard
+Предлагается снять зависимости 
+\begin_inset Formula $T_{1}(l)$
+\end_inset
+
+ и 
+\begin_inset Formula $T_{2}(l)$
+\end_inset
+
+ для гибкого и упругого подвесов, и по зависимости 
+\begin_inset Formula $ln\left(\omega_{2}^{2}-\omega_{1}^{2}\right)$
+\end_inset
+
+ от 
+\begin_inset Formula $ln\, l$
+\end_inset
+
+ определить показатель степени 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ и коэффициент 
+\begin_inset Formula $a$
+\end_inset
+
+:
+\begin_inset Formula \[
+ln\left(\omega_{2}^{2}(l)-\omega_{1}^{2}(l)\right)=ln\left(\frac{1}{am}\right)-\alpha ln\, l\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Экспериментальная часть
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Для определения периода колебаний рекоммендуется измерять секундомером время
+ 15 периодов и делить на 15.
+\end_layout
+
+\begin_layout Standard
+Длину подвеса следует изменять от 10 до 30 см с шагом 2.5 см.
+ При изверениях в сложном варианте 1 нужно также взять несколько совсем
+ маленьких значений.
+\end_layout
+
+\end_body
+\end_document

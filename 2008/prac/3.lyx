@@ -1,0 +1,244 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Задача 3.
+ Крутильный маятник.
+\end_layout
+
+\begin_layout Date
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Для выполненя этой задачи нужно знать основы динамики вращательного движения.
+\end_layout
+
+\begin_layout Standard
+Крутильный маятник - это палка, подвешенная за середину на проволоку, закреплённ
+ую с другого конца.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename rotator.png
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если повернуть палку, закручивая проволоку, а потом отпустить, то система
+ начнёт совершать крутильные колебания.
+ Их период равен
+\begin_inset Formula \[
+T=2\pi\sqrt{\frac{I}{k}},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $I$
+\end_inset
+
+ - момент инерции палки, 
+\begin_inset Formula $k$
+\end_inset
+
+ - коэффициент 
+\begin_inset Quotes eld
+\end_inset
+
+крутильной жёсткости
+\begin_inset Quotes erd
+\end_inset
+
+ (отношение крутящего момента, моздаваемого проволокой, к углу, на который
+ она закручена).
+\end_layout
+
+\begin_layout Subsection*
+Вариант 1
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Если повесить на палку с двух концов по грузику на расстоянии 
+\begin_inset Formula $l$
+\end_inset
+
+ от оси вращения, то момент инерции будет равен 
+\begin_inset Formula $I=I_{0}+2ml^{2},$
+\end_inset
+
+ где 
+\begin_inset Formula $m$
+\end_inset
+
+ - масса грузика.
+\end_layout
+
+\begin_layout Standard
+Измерить зависимость 
+\begin_inset Formula $T(l)$
+\end_inset
+
+ и построить 
+\begin_inset Formula $T^{2}(l^{2})$
+\end_inset
+
+.
+ Эта зависимость должна иметь вид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+T^{2}=\frac{4\pi^{2}}{k}\left(I_{0}+2ml^{2}\right)=a+b\cdot l^{2}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Зная 
+\begin_inset Formula $m$
+\end_inset
+
+, можно по отношению 
+\begin_inset Formula $\frac{a}{b}$
+\end_inset
+
+ найти момент инерции палки.
+\end_layout
+
+\begin_layout Subsection*
+Вариант 2
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Коэффициент крутильной жёсткости равен 
+\begin_inset Formula \[
+k=\frac{Kr^{4}}{L},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $r$
+\end_inset
+
+ и 
+\begin_inset Formula $L$
+\end_inset
+
+ - радиус и длина проволоки, 
+\begin_inset Formula $K$
+\end_inset
+
+ - так называемый модуль кручения, характеристика материала проволоки.
+ Если момент инерции палки известен, то по зависимости 
+\begin_inset Formula $T(L)$
+\end_inset
+
+ можно определить 
+\begin_inset Formula $K$
+\end_inset
+
+ (радиус, к сожалению, не поварьировать).
+\end_layout
+
+\begin_layout Subsection*
+Экспериментальная часть
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Для определения периода колебаний рекоммендуется измерять секундомером время
+ 7 полных колебаний.
+\end_layout
+
+\begin_layout Standard
+На палку нанизываются грузы сложной формы.
+ Под 
+\begin_inset Formula $l$
+\end_inset
+
+ следует понимать расстояние до центра масс, который непонятно где.
+ Впрочем, сверхточность тут не нужна.
+\end_layout
+
+\begin_layout Standard
+В обоих вариантах измерять при 6-8 значениях длины/расстояния в максимально
+ широких пределах.
+\end_layout
+
+\end_body
+\end_document

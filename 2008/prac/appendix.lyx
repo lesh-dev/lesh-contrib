@@ -1,0 +1,378 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Приложения
+\end_layout
+
+\begin_layout Section
+Определение параметров по линейной зависимости
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Пусть имеются экспериментально снятая зависимость физической величины y
+ от другой физической величины 
+\begin_inset Formula $x$
+\end_inset
+
+ в виде набора измеренных значений 
+\begin_inset Formula $\left(x_{i},y\right),\, i=1,2,\dots n$
+\end_inset
+
+.
+ Пусть при этом теория предсказывает связь между этими величинами в виде
+ линейной зависимости 
+\begin_inset Formula $y=a_{0}+a_{1}x$
+\end_inset
+
+ с неизвестными коэффициентами 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ и 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+.
+ Задача определения этих коэффициентов по экспериментальным данным обычно
+ решается методом наименьших квадратов (МНК).
+ Для этого формулируется следующая математическая задача:
+\end_layout
+
+\begin_layout Quote
+Найти такие 
+\begin_inset Formula $\tilde{a_{0}}$
+\end_inset
+
+ и 
+\begin_inset Formula $\tilde{a_{1}}$
+\end_inset
+
+, что величина
+\begin_inset Formula \[
+\underset{i=1}{\overset{n}{\sum}}\left(y_{i}-\left(a_{0}+a_{1}x_{i}\right)\right)^{2}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+минимальна.
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Решение этой задачи даётся формулами
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+a=\frac{\underset{i=1}{\overset{n}{\sum}}y_{i}\cdot\underset{i=1}{\overset{n}{\sum}}x_{i}^{2}-\underset{i=1}{\overset{n}{\sum}}x_{i}\cdot\underset{i=1}{\overset{n}{\sum}}x_{i}y_{i}}{n\underset{i=1}{\overset{n}{\sum}}x_{i}^{2}-\left(\underset{i=1}{\overset{n}{\sum}}x_{i}\right)^{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+b=\frac{n\cdot\underset{i=1}{\overset{n}{\sum}}x_{i}y_{i}\cdot-\underset{i=1}{\overset{n}{\sum}}y_{i}\cdot\underset{i=1}{\overset{n}{\sum}}x_{i}}{n\underset{i=1}{\overset{n}{\sum}}x_{i}^{2}-\left(\underset{i=1}{\overset{n}{\sum}}x_{i}\right)^{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если теоретическая зависимость нелинейна, то обычно от 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ переходят к таким функциям 
+\begin_inset Formula $X(x)$
+\end_inset
+
+ и 
+\begin_inset Formula $Y(y)$
+\end_inset
+
+, которые будут связаны линейно.
+ Например, если связь 
+\begin_inset Formula $y(x)$
+\end_inset
+
+ даётся формулой 
+\begin_inset Formula $y=\sqrt{a+\frac{b}{x}}$
+\end_inset
+
+, то можно взять 
+\begin_inset Formula $X=\frac{1}{x}$
+\end_inset
+
+ и 
+\begin_inset Formula $Y=y^{2}$
+\end_inset
+
+.
+ Эта процедура называется линеаризацией.
+\end_layout
+
+\begin_layout Standard
+Если свободного члена в теоретической зависимости нет, то можно просто посчитать
+ среднее арифметическое от 
+\begin_inset Formula $\frac{y_{i}}{x_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Пример вывода формул нелинейного МНК
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Линеаризация теоретической зависимости не всегда возможна.
+ В этом случае нужно получать фолмулы для каждой конкретной нелинейной зависимос
+ти.
+\end_layout
+
+\begin_layout Standard
+Пусть, например, теоретическая зависимость имеет вид
+\begin_inset Formula \[
+y=a\, sin\, x+b\, cos\, x\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Задача МНК ставится в виде
+\begin_inset Formula \[
+\Delta=\underset{i=1}{\overset{n}{\sum}}\left(y_{i}-\left(a\, sin\, x_{i}+b\, cos\, x_{i}\right)\right)=\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+=\underset{i=1}{\overset{n}{\sum}}\left(y_{i}^{2}+a^{2}sin^{2}x_{i}+b^{2}cos^{2}x_{i}-2ay_{i}\, sin\, x_{i}-2by_{i}\, cos\, x_{i}+2ab\, sin\, x_{i}\, cos\, x_{i}\right)\rightarrow min\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Запишем необходимое условие минимума:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\frac{\partial\Delta}{\partial a}=\frac{\partial\Delta}{\partial b}=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+\begin{cases}
+\sum\left(2a\, sin^{2}x_{i}+b\, sin\,2x_{i}-2y_{i}\, sin\, x_{i}\right)=0\\
+\sum\left(2b\, cosx_{i}+a\, sin\,2x_{i}-2y_{i}\, cos\, x_{i}\right)=0\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Решение этой систему уравнений имеет вид
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+a=\frac{\sum y_{i}\, sin\, x_{i}\cdot\sum cos^{2}x_{i}-\sum sin\, x_{i}\, cos\, x_{i}\cdot\sum y_{i}\, cos\, x_{i}}{\sum sin^{2}x_{i}\cdot\sum cos^{2}x_{i}-\left(\sum sin\, x_{i}\, cos\, x_{i}\right)^{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+b=\frac{\sum y_{i}\, cos\, x_{i}\cdot\sum sinx_{i}-\sum sin\, x_{i}\, cos\, x_{i}\cdot\sum y_{i}\, sin\, x_{i}}{\sum sin^{2}x_{i}\cdot\sum cos^{2}x_{i}-\left(\sum sin\, x_{i}\, cos\, x_{i}\right)^{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Основы динамики вращательного движения
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Рассмотрим тело, которое может вращаться вокруг некоторой фиксированной
+ оси.
+ Как известно, условие равновесия в этом случае формулируется в виде 
+\begin_inset Quotes eld
+\end_inset
+
+сумма моментов сил, действующих на тело, равна 0
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Оказывается, что в случае неравновесия можно записать аналог второго закона
+ Ньютона применительно к вращательному движению:
+\begin_inset Formula \[
+M=I\beta,\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $M$
+\end_inset
+
+ - суммарный момент сил, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ - угловое ускорение (cкорость изменения угловой скорости), 
+\begin_inset Formula $I$
+\end_inset
+
+ - момент инерции тела (относительно данной оси), аналог массы применительно
+ к вращательному движению.
+ Момент инерции зависит от массы и формы тела, а также от положения оси
+ вращения.
+\end_layout
+
+\begin_layout Standard
+Примеры формул для моментов инерции некоторых тел:
+\end_layout
+
+\begin_layout Itemize
+Материальная точка: 
+\begin_inset Formula $ml^{2}$
+\end_inset
+
+, где 
+\begin_inset Formula $l$
+\end_inset
+
+ - расстояние до оси вращения
+\end_layout
+
+\begin_layout Itemize
+Палка длины 
+\begin_inset Formula $L$
+\end_inset
+
+ вокруг перпендикулярной оси, проходящей через центр: 
+\begin_inset Formula $\frac{mL^{2}}{12}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Палка длины 
+\begin_inset Formula $L$
+\end_inset
+
+ вокруг перпендикулярной оси, проходящей через край: 
+\begin_inset Formula $\frac{mL^{2}}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Диск радиуса 
+\begin_inset Formula $r$
+\end_inset
+
+ вокруг своей оси: 
+\begin_inset Formula $\frac{mr^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

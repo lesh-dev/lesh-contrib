@@ -1,0 +1,149 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Теоретическое описание вольт-амперной характеристики лампочки накаливания
+\end_layout
+
+\begin_layout Standard
+ВАХ лампочки описывается уравнением теплового баланса: мощность, выделяемая
+ электрическим током, идёт на теплообмен с окружающей средой и на тепловое
+ излучение.
+ Теплообмен пропорционален разности температуры нити и окружающей среды,
+ мощность излучения - четвёртой степени температуры по Кельвину (закон Стефана-Б
+ольцмана):
+\begin_inset Formula \begin{equation}
+\frac{U^{2}}{R\left(T\right)}=K\left(T-T_{0}\right)+\sigma ST^{4},\label{eq:heat}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ - комнатная температура, 
+\begin_inset Formula $S$
+\end_inset
+
+ - площадь поверхности нити накаливания (её можно как-нибудь оценить), 
+\begin_inset Formula $R(T)$
+\end_inset
+
+ - температурная зависимость сопротивления нити накала, которая может быть
+ представлена в виде
+\begin_inset Formula \begin{equation}
+R\left(T\right)=R_{0}\left(1+\alpha\left(T-T_{0}\right)\right),\label{eq:resist}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $R_{0}$
+\end_inset
+
+ - сопротивление при комнатной температуре, коэффициент 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ измеряется отдельно.
+\end_layout
+
+\begin_layout Standard
+Подставив это в (
+\begin_inset LatexCommand ref
+reference "eq:heat"
+
+\end_inset
+
+), получим:
+\begin_inset Formula \[
+\frac{U^{2}}{R_{0}\left(1+\alpha\left(T-T_{0}\right)\right)}=K\left(T-T_{0}\right)+\sigma ST^{4}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+U^{2}=KR_{0}\left(T-T_{0}\right)+K\alpha R_{0}\left(T-T_{0}\right)^{2}+R_{0}\sigma ST^{4}+R_{0}\alpha\sigma ST^{4}\left(T-T_{0}\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+U^{2}=R_{0}\alpha\sigma ST^{5}+R_{0}\sigma S\left(1-\alpha T_{0}\right)T^{4}+K\alpha R_{0}T^{2}+KR_{0}\left(1-2\alpha T_{0}\right)T-KR_{0}T_{0}\left(1-\alpha T_{0}\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Температуру нити можно выразить через сопротивление нити (непосредственно
+ измеряемое) из (
+\begin_inset LatexCommand ref
+reference "eq:resist"
+
+\end_inset
+
+).
+\end_layout
+
+\end_body
+\end_document

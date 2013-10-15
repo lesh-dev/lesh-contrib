@@ -1,0 +1,173 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Задача 6.
+ Электролитическая ванна
+\end_layout
+
+\begin_layout Date
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Электролитическая ванна позволяет измерять распределение потенциала электрическо
+го поля, созданного набором проводников.
+ Её использоване основано на том факте, что при заполнении пространства
+ электролитом распределение потенциала при определённых условиях не изменяется,
+ зато появляется возможность измерять потенциал в каждой точке пространства
+ при помощи вольтметра.
+\end_layout
+
+\begin_layout Standard
+В данной задаче используется 
+\begin_inset Quotes eld
+\end_inset
+
+плоская
+\begin_inset Quotes erd
+\end_inset
+
+ ванна, в которой исследуется поле цилиндрического конденсатора.
+ Конденсатор состоит из тонкого центрального провода и внешней цилиндрической
+ оболочки.
+ На конденсатор подаётся напряжение с блока питания; измеряется распределение
+ потенциала внутри конденсатора.
+\end_layout
+
+\begin_layout Standard
+Распределение потенциала задаётся формулой
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\phi(x)=U\frac{ln\frac{x}{r}}{ln\frac{R}{r}},\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $U$
+\end_inset
+
+ - выходное напряжение блока питания (потенциал отсчитывается от центрального
+ провода), 
+\begin_inset Formula $r$
+\end_inset
+
+ - радиус центрального провода, 
+\begin_inset Formula $R$
+\end_inset
+
+ - радиус оболочки.
+\end_layout
+
+\begin_layout Standard
+Из зависимости 
+\begin_inset Formula $\phi(ln\, x)$
+\end_inset
+
+ можно найти радиус центрального провода:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\phi(x)=U\frac{ln\, x-ln\, r}{ln\frac{R}{r}}=\frac{U}{ln\frac{R}{r}}ln\, x-\frac{U\, ln\, r}{ln\frac{R}{r}}=a\, ln\, x+b\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+-\frac{b}{a}=ln\, r\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Экспериментальная часть
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+На центральный провод подаётся плюи питания (12В), на оболочку - минус.
+ Для измерения потенциала плюс тестера нужно подключить к центральному электроду
+, а минус опустить в электролит в нужной точке.
+ Измерить потенциал в 10-12 точках, начиная с 1 см от центра (ближе к центру
+ - с меньшим интервалом).
+\end_layout
+
+\begin_layout Subsection*
+Задание
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Снять распределение потенциала и определить из него радиус провода.
+ Также измерить радиус провода штангенциркулем и сравнить полученные значения,
+ объяснить возможное расхождение.
+\end_layout
+
+\end_body
+\end_document

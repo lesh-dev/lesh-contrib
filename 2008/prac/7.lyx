@@ -1,0 +1,135 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 10
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Задача 7.
+ Дифракция на щели
+\end_layout
+
+\begin_layout Date
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+При падении на экран луча лазерной указки, прошедшего через тонкую щель,
+ на экране возникает сложное распределение интенсивности в направлении,
+ перпендикулярном щели.
+ Зависимость интенсивности освещения от координаты (с началом координат
+ в точке попадания прямого луча) приведена на рисунке.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename difraction.ps
+	width 5cm
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Координаты минимумов освещённости 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+ определяются из условия
+\begin_inset Formula \[
+d\frac{x_{m}}{L}=m\lambda,\, m=\pm1,\pm2,\dots\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+где 
+\begin_inset Formula $d$
+\end_inset
+
+ - ширина щели, 
+\begin_inset Formula $L$
+\end_inset
+
+ - расстояние до экрана, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ - длина волны излучения.
+\end_layout
+
+\begin_layout Standard
+Определив координаты нескольких минимумов, можно определить отношение 
+\begin_inset Formula $\frac{\lambda}{d}$
+\end_inset
+
+.
+ Определив это отношение при нескольких значениях ширины щели, можно определить
+ длину волны.
+\end_layout
+
+\begin_layout Subsection*
+Экспериментальная часть
+\end_layout
+
+\begin_layout Standard
+\InsetSpace ~
+
+\end_layout
+
+\begin_layout Standard
+Щель создаётся при помощи штангенциркуля.
+ Измерения проводить 5-6 значениях ширины щели в диапазоне от 100 до 400
+ мкм.
+ При малой ширине экран ставить поближе, при больших - подальше.
+\end_layout
+
+\end_body
+\end_document
