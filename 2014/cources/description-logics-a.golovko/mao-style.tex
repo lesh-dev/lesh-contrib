@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\newif\ifft
+% Раскомментируйте эту строчку, чтобы скомпилировать файл в режиме "для преподов" (с пометками на поляхи устными задачами):
+%\fttrue
+
+% Поля.
+\oddsidemargin=-0.5in
+\textwidth=\ifft6.8in\else7.3in\fi
+\topmargin=-0.75in
+\setlength{\textheight}{45\baselineskip}
+\setlength{\textheight}{\baselinestretch\textheight}
+\addtolength{\textheight}{\topskip}
+
+% Колонтитул.
+\makeatletter
+\renewcommand{\@oddhead}
+{\raisebox{0pt}[\headheight][0pt]{%
+\vbox{\hbox to\textwidth{Дескрипционные логики \hfil \strut
+\the\year
+%2014
+}\hrule}}%
+}
+\makeatother
+
+% Записывайте задачи как "\z15) Докажите, что...".
+\usepackage{amssymb}
+\newcounter{zadacha}%[section]
+\def\z#1){\par\vspace{6pt}\noindent\addtocounter{zadacha}{1}%
+\textbf{$\lozenge\,$\arabic{zadacha}.} }
+
+% Заметки на полях (отображаются только в режиме "для преподов"):
+% \m{А эту задачу никто не решит!}
+\newcounter{myMargin}
+\newcommand{\m}[1]{\ifft $^{\star\mbox{-}\tiny\arabic{myMargin}}$\marginpar{\tiny $\star\mbox{-}\tiny\arabic{myMargin}$  #1\\ \hrule\addtocounter{myMargin}{1}}\else\fi}
+
+% $a\hm+b\hm=c$, если возникла необходимость сделать перенос в формуле.
+% На всякий случай.
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% definitions
+\usepackage{amsthm}
+\newtheorem{df}{Определение}
+
+%
+\usepackage{enumerate}
+
+%\usepackage{titlesec}
+%\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+
+% Для ведомости на обратной стороне листа.
+\newif\ifvedomost
+\newcommand{\vedomost}[1]{\ifvedomost{#1}\fi}

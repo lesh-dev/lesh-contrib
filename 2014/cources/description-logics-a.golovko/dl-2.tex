@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\include{mao-style}
+%\usepackage{first-indent}
+\begin{document}
+
+\subsubsection*{Логика $\mathcal{EL}$.}
+В $\mathcal{EL}$ есть имена классов (<<концептов>>) $A_1, A_2, \dots$, класс $\mathrm T$ (<<thing>>),
+имена ролей $r_1, r_2, \dots$, операция пересечения $\sqcap$, квантор существования $\exists$.
+
+Классы строятся из $A_1,\dots$, $T$;
+если $C$, $D$ --- классы, $r$ --- роль, то $C\sqcap D$ и $\exists r.C$ --- классы.
+
+Определения в $\mathcal{EL}$ имеют вид $A\equiv B$ или $A\sqsubseteq B$,
+где $A$ --- имя класса, $B$ --- класс.
+
+$\mathcal{EL}$-терминология --- конечное множество определений,
+в котором никакое имя не определяется дважды.
+(Циклические определения возможны).
+
+$\mathcal{EL}$-TBox --- это конечное множество вложений классов $C\sqsubseteq D$.
+
+
+\subsubsection*{Семантика $\mathcal{EL}$.}
+Интерпретация $\mathcal{I} = (\Delta^\mathcal{I}, \cdot^\mathcal{I})$:
+$\Delta^\mathcal{I} \neq \emptyset$ --- домен,
+$\cdot^\mathcal{I}$ сопоставляет каждому имени класса $A$
+некоторое подмножество домена $A^\mathcal{I} \subseteq \Delta^\mathcal{I}$,
+каждому имени роли $r$ --- бинарное отношение
+$r^\mathcal{I} \subseteq \Delta^\mathcal{I} \times \Delta^\mathcal{I}$.
+
+Интерпретация произвольного класса задаётся следующими правилами:
+$(\exists r.C)^\mathcal{I} =
+\{ x\in\Delta^\mathcal{I} | \exists y\in\Delta^\mathcal{I}
+  \colon 
+(x,y) \in r^\mathcal{I}, \, y\in C^\mathcal{I} \}$,
+$(C\sqcap D)^\mathcal{I} = C^\mathcal{I} \cap D^\mathcal{I}$,
+$T^\mathcal{I} = \Delta^\mathcal{I}$.
+
+{\z) Выберем следующую интерпретацию:
+$\Delta^\mathcal{I} = \{\mbox{школьники}\} \cup \{\mbox{курсы МаО-}2014\}$, \\
+$A_0^\mathcal{I} = \{\mbox{курсы за 4 цикл}\}$, \\
+$A_1^\mathcal{I} = \{\mbox{решающий эту задачу}\}$, \\
+$r_0^\mathcal{I} = \{(x,y)\colon \mbox{школьник x ходил на курс y}\}$, \\
+$r_1^\mathcal{I} = \{(x,y)\colon \mbox{школьник x сдал y}\}$, \\
+$r_2^\mathcal{I} = \{(x,y)\colon \mbox{на курс x ходил школьник y}\}$, \\
+$r_3^\mathcal{I} = \{(x,y)\colon \mbox{курс x был сдан школьником y}\}$. \\
+Постройте интерпретации классов $\exists r_0.A_0$, $\exists r_1.A_1$, $\exists r_2.A_0$,
+$\exists r_2.A_1$, $\exists r_3.A_0$, $\exists r_3.A_1$.
+}
+
+\subsubsection*{Модели и вывод в $\mathcal{EL}$.}
+Будем говорить, что в интерпретации $\mathcal{I}$ выполняется вложение классов $C\sqsubseteq D$
+(записывается $\mathcal{I} \vDash C\sqsubseteq D$), если
+$C^\mathcal{I} \subseteq D^\mathcal{I}$.
+%$C\equiv D \Leftrightarrow C\sqsubseteq D \,\mbox{и}\, D\sqsubseteq C$.
+Аналогично, $\mathcal{I} \vDash C\equiv D \Leftrightarrow C^\mathcal{I} = D^\mathcal{I}$.
+
+Пусть $\tau$ --- $\mathcal{EL}-TBox$. Интерпретация $\mathcal{I}$ называется моделью для $\tau$
+($\mathcal{I} \vDash \tau$),
+если в ней выполняется каждое вложение или равенство классов из $\tau$.
+
+Говорят, что из TBox $\tau$ выводится вложение классов ($\tau \vDash C\sqsubseteq D$), если
+$\forall\mathcal{I} \, \mathcal{I}\vDash\tau \Rightarrow \mathcal{I}\vDash C\sqsubseteq D$.
+
+\z) Пусть $\tau = \{A \sqsubseteq B \sqcap C\}$.
+Верно ли, что 
+а) $\tau \vDash B \sqsubseteq C$?
+б) $\tau \vDash B \sqsubseteq A$?
+в) $\tau \vDash A \sqsubseteq B$?
+г) $\tau \vDash \exists r . A \sqsubseteq \exists r . B$?
+д) $\tau \vDash \exists r . B \sqsubseteq \exists r . A$?
+
+%е) $\tau \vDash $
+%ё) $\tau \vDash $
+%ж) $\tau \vDash $
+%з) $\tau \vDash $
+%и) $\tau \vDash $
+
+\z) Верно ли, что если $\tau\vDash C\sqsubseteq D$ и $\tau\vDash D\sqsubseteq E$, то
+$\tau\vDash C\sqsubseteq E$?
+
+\z) Пусть $\tau = \{\exists r.\mathrm{T} \sqsubseteq C,\, E \equiv \exists r.D\}$. % домен r = C
+Верно ли, что $\tau \vDash E \sqsubseteq C$? $\tau \vDash \exists r.C \sqsubseteq C$?
+
+%\z0) Куча упражнений на то, выводится ли одно из другого, что выводится, доказать, опровергнуть
+
+
+
+\subsubsection*{Логика $\mathcal{ALC}$.}
+% 4 слайд.
+В логике $\mathcal{ALC}$ к уже известным классам, ролям, $\exists$, $\sqcup$, $T$
+добавляются $\perp$ (пустой класс), $\sqcap$ (пересечение классов), $\forall$, $\lnot$
+(отрицание, дополнение к классу).
+
+\z5) Сформулируйте, как интерпретируются новые конструкции.
+
+
+
+\pagebreak
+
+
+
+
+
+
+
+\subsubsection*{Зоопарк дескрипционных логик.}
+$\mathcal{AL} = T | \perp | A | \lnot A | C\sqcap D | \exists r.C | \forall r.C$.
+
+В $\mathcal{ALC}$ добавляется $\sqcup$.
+
+Семантика новых символов:
+\begin{itemize}
+\item $\perp^\mathcal{I} = \emptyset$
+\item $(C\sqcup D)^\mathcal{I} = C^\mathcal{I} \cup D^\mathcal{I}$
+\item $(\forall r.C)^\mathcal{I} = \{x\in\Delta^\mathcal{I}\colon \forall y\in\Delta^\mathcal{I}, (x,y)\in r \Rightarrow y\in C\}$
+      (ограничение значения)
+\item $(\lnot C)^\mathcal{I} = \Delta^\mathcal{I}\setminus C^\mathcal{I} = \{x\in\Delta^\mathcal{I}\colon x\notin C^\mathcal{I}\}$
+\end{itemize}
+
+$\mathcal{FL}^-$ --- это $\mathcal{AL}$ без отрицаний.
+
+$\mathcal{FL}^0$ --- $\mathcal{AL}$ без отрицания и квантора существования.
+
+
+$\mathcal{F}$ --- функциональность $T\sqsubseteq \leq 1 r.T$.
+
+$\mathcal{N} = \leq n \, r.T,\,\geq n\,r.T$.
+
+$\mathcal{Q} = \leq n \, r.C,\,\geq n\,r.C$ (ограничения кардинальности).
+
+$\mathcal{S}$ --- ALC + транзитивность.
+
+$\mathcal{I}$ --- обратные роли.
+
+$\mathcal{H}$ --- включения ролей.
+
+$\mathcal{R}$ --- композиция ролей $r\circ s$.
+
+$\mathcal{O}$ --- номиналы (классы из ровно одного указанного элемента).
+
+
+$\mathcal{SHOIQ}$ это OWL DL, $\mathcal{SROIQ}$ это OWL 2.
+
+% f --- функция
+
+\z) Запишите в виде вложений классов следующие утверждения:
+а) каждый человек имеет ровно одного отца
+б) слоны делятся на индийских и африканских
+в) зачёт может быть сдан только по тому курсу, содержание которого человек изучил
+г) если человек был на ЛЭШ-2014, то хотя бы в один из дней он был в Беляево
+д) на любом костре либо есть взрослый, либо есть проблема
+е) Лёша и Саша это два разных человека
+ё) Карл Маркс и Фридрих Энгельс --- не муж и жена, а 4 совершенно разных человека
+$\mbox{ж}^*$) вложение классов транзитивно.
+
+\z) Реализуемы ли (то есть найдётся ли модель, в которой эти классы представлены непустыми множествами)
+следующие классы?
+а) $(\forall r.C) \sqcap (\forall r.\lnot C)$
+б) $(\forall r.C) \sqcap (\exists r.\lnot C)$
+в) $\lnot (\forall r.C) \sqcap (\exists r.\lnot C)$
+г) $\lnot (\forall r.C) \sqcap \lnot (\exists r.\lnot C)$
+
+\z) Пусть в TBox входят $T\sqsubseteq \leq 1\,r.T$, $T\sqsubseteq \geq 1\,r.T$, $r\circ r\sqsubseteq r$.
+Что можно сказать о моделях этого TBox?
+
+%\z) $C\equiv \exists r.E$, $D\equiv \exists r^-.E$, $r$ транзитивно, $r$ и $r^-$ имеют минимальную кардинальность 1.
+%Верно ли, что $C\equiv D$?
+
+%\z) Верно ли, что $$
+
+\end{document}
+
+% Соображения:
+% про интерпретации важно рассказать, и там можно дать упражнения.
+% вывод (через определение "в любой модели") важная штука, нужны упражнения и много
+% Канва такая: определение EL, интерпретация, модель, вывод (2 слайд);
+% зоопарк(5 слайд, начало 6); каноническая модель; табличный алгоритм(4 слайд, начало 5); бла-бла о тройках.
+% 7 слайд -- о запросах. 8 — тоже, потом об OWL, DL-lite
+
+
+
+% Без паники. Спокойно.
+% Я планировал ещё зоопарк логик, табличный алгоритм, практикум и болтовня об RDF.
+% По-моему, мы не успеем всё это.
+% Поэтому я делаю зоопарк, даю упражнения на всякие кванторы и упражнения на формулировку аксиом.
+% Потом будет практикум и болтовня.
