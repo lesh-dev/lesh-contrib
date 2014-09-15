@@ -1,17 +1,17 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{cmap}
-\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
-
 \usepackage{amsmath}
 \usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{bookmark}
 
 \headheight16pt
 
-\usepackage{indentfirst}
-
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[LO]{Межрегиональная физическая олимпиада 2014---2015. Правила}
@@ -24,6 +24,8 @@
 \def\thesection{\arabic{section}.}
 \def\thesubsection{\arabic{section}.\arabic{subsection}.}
 
+\input{dates}
+
 \title{\bf Межрегиональная физическая олимпиада\\Правила заочного тура}
 \author{ГБОУ <<Интеллектуал>> г. Москвы --- Физическое Отделение ЛЭШ\\
 fizlesh.ru/contest}
@@ -33,7 +35,7 @@ fizlesh.ru/contest}
 \thispagestyle{empty}
 
 Межрегиональная олимпиада состоит из заочного и очного туров. Заочный тур проводится
-\textbf{с~20~октября 2013 года} до \textbf{20~ноября 2013 года} включительно.
+с~\textbf{\olympdatestart~\olympyearstart~года} до \textbf{\olympdateend~\olympyearend~года} включительно.
 До этого дня (не обязательно в последний день, лучше раньше) необходимо выслать решения предложенных задач.
 Условия задач можно увидеть также на сайте \href{http://fizlesh.ru/contest}{fizlesh.ru/contest}.
 Там же можно найти более подробную информацию об олимпиаде и её организаторах.
@@ -111,7 +113,7 @@ fizlesh.ru/contest}
 \bigskip
 
 
-10 января 2014~г. закончится проверка работ и определение победителей первого тура.
+\olympcheckend~\olympyearend~года закончится проверка работ и определение победителей первого тура.
 Победители будут приглашены на второй тур олимпиады~--- Всероссийскую Весеннюю Многопредметную Школу
 в г.~Пущино. Списки приглашённых появятся на сайте\\
 \centerline{\href{http://fizlesh.ru/contest}{fizlesh.ru/contest}.}
