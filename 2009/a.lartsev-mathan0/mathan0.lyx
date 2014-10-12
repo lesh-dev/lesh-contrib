@@ -1,0 +1,1270 @@
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language russian
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Курс 
+\begin_inset Quotes eld
+\end_inset
+
+Математический анализ
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Введение
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Математический анализ ещё называют 
+\begin_inset Quotes eld
+\end_inset
+
+Анализом бесконечно малых
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Действительно, такие основные понятия математического анализа, как производная
+ и интеграл, можно с некой долей условности понимать как операции с бесконечно
+ малыми величинами.
+ Изначально, на ранних стадиях развития данной области математики, под 
+\begin_inset Quotes eld
+\end_inset
+
+бесконечно малой величиной
+\begin_inset Quotes erd
+\end_inset
+
+ понималось что-то вроде 
+\begin_inset Quotes eld
+\end_inset
+
+очень-очень маленького числа
+\begin_inset Quotes erd
+\end_inset
+
+.
+ И хотя сейчас такая интуитивная трактовка в математике давно не используется,
+ в нашем курсе мы нередко будем к ней прибегать.
+ Во-первых, она часто используется в физике (как мы позже увидим, математически
+ строгое понятие бесконечно малой величины применительно к физическим величинам
+ просто не имеет смысла).
+ Во-вторых, математически строгие формулировки весьма громоздки.
+\end_layout
+
+\begin_layout Subsection*
+Пример: вычисление коэффициента расширения по площади
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Проиллюстрируем понятие бесконечно малой величины следующим примером.
+\end_layout
+
+\begin_layout Standard
+Пусть имеется материал, у которого при нагревании на 
+\begin_inset Formula $1^{\circ}$
+\end_inset
+
+C все линейные размеры увеличиваются в 
+\begin_inset Formula $\left(1+\alpha\right)$
+\end_inset
+
+ раз, где 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ -- небольшое число, порядка 
+\begin_inset Formula $0.01$
+\end_inset
+
+ или меньше.
+ Найдём, во сколько раз при этом изменится площадь пластины, сделанного
+ из такого материала.
+\end_layout
+
+\begin_layout Standard
+Рассмотрим прямоугольник со сторонами 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Его площадь 
+\begin_inset Formula $S=ab$
+\end_inset
+
+.
+ После нагревания длины сторон станут 
+\begin_inset Formula $a\left(1+\alpha\right)$
+\end_inset
+
+ и 
+\begin_inset Formula $b\left(1+\alpha\right)$
+\end_inset
+
+.
+ Площадь разогретого прямоугольника равна
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+S'=a\left(1+\alpha\right)\cdot b\left(1+\alpha\right)=S\left(1+\alpha\right)^{2}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Относительное изменение площади
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\beta=\frac{\Delta S}{S}=\frac{S'-S}{S}=\left(1+\alpha\right)^{2}-1=2\alpha+\alpha^{2}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $\alpha=0.01$
+\end_inset
+
+, тогда 
+\begin_inset Formula $\beta=0.0201\approx0.02$
+\end_inset
+
+.
+ Если 
+\begin_inset Formula $\alpha=0.001$
+\end_inset
+
+, то 
+\begin_inset Formula $\beta=0.002001\approx0.002$
+\end_inset
+
+.
+ Видно, что всякий раз 
+\begin_inset Formula $\beta\approx2\alpha$
+\end_inset
+
+, причём чем меньше 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, тем точнее это равенство.
+\end_layout
+
+\begin_layout Standard
+Теперь можно сформулировать вывод (да простят нас математики за нестрогость):
+\end_layout
+
+\begin_layout Quote
+Если 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ -- не просто малая, а 
+\shape italic
+бесконечно малая
+\shape default
+ величина, то равенство становится точным.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Дальнейшее изложение будет вестить в таком же ключе: мы будет записывать
+ приближённые равенства, в которые входят малые величины, а потом заменять
+ их точными, заменяя малые величины 
+\begin_inset Quotes eld
+\end_inset
+
+бесконечно малыми
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Математики называют это предельным переходом, и у них есть целая теория,
+ посвящённая тому, когда и каким образом можно такой переход осуществлять.
+ Мы в такие подробности углубляться не будем, и ограничимся интуитивным
+ подходом.
+ В конце концов, если сам Эйлер так делал, то чем мы хуже?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Функция и график функции
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Понятие функции -- одно из основных понятий в математическом анализе.
+ Фундаментальнее него -- только понятие действительного числа, но что такое
+ действительное число, мы тут все, надеюсь, более-менее знаем.
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+
+\backslash
+begin{возможный кусок математического ликбеза}
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Вообще-то школьники должны были пройти это в 7 классе, так что этот кусок
+ лишь в качестве напоминания
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+По определению, функция [одного аргумента] -- это правило, по которому каждому
+ числу ставится в соответствие некоторое другое число.
+ На самом деле, не обязательно каждому -- если какому-то числу ничего в
+ соответствии не ставится, то это нормально -- говорят, что для этого числа
+ функция не определена.
+ Главное, что одному числу не может соответствовать 2 или более чисел --
+ только одно.
+ Если нескольким различным числам соответствует одно и то же число, то это
+ нормально.
+ Например, можно рассмотреть функцию, которая вообще всем действительным
+ числам ставит в соответствие одно и то же число, такая функция называется
+ константой.
+\end_layout
+
+\begin_layout Standard
+Тот факт, что функция 
+\begin_inset Formula $f$
+\end_inset
+
+ ставит в сооветствие числу 
+\begin_inset Formula $x$
+\end_inset
+
+ число 
+\begin_inset Formula $y$
+\end_inset
+
+, принято записывать в виде 
+\begin_inset Formula $f\left(x\right)=y$
+\end_inset
+
+.
+ Так, например, если функция 
+\begin_inset Formula $f$
+\end_inset
+
+ -- константа, то 
+\begin_inset Formula $f\left(x\right)=a$
+\end_inset
+
+ для любого 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Вот ещё примеры функций:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+ -- каждому числу ставится в соответствие оно само.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+ -- каждому числу ставится в соответствие обратное.
+ Причём числу 0 ничего в соответствие не ставится, т.к.
+ на ноль делить нельзя -- при 
+\begin_inset Formula $x=0$
+\end_inset
+
+ эта функция не определена.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f\left(x\right)=\sqrt{x}$
+\end_inset
+
+ -- функция определена только для неотрицательных чисел.
+\end_layout
+
+\begin_layout Standard
+функция 
+\begin_inset Formula $\pi\left(x\right)$
+\end_inset
+
+, равная количеству простых чисел, не превосходящих 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\pi\left(0\right)=\pi\left(1\right)=\pi\left(1.999999\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\left(2\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\left(10.5\right)=4$
+\end_inset
+
+, и т.д.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $j(x)=\begin{cases}
+1,\,если\, x\,-\text{рациональное}\\
+0,\,если\, x\,-\text{иррациональное}\end{cases}$
+\end_inset
+
+ -- так называемая функция Дирихле.
+ Очень странная функция, но под наше определение подходит.
+\end_layout
+
+\begin_layout Standard
+Кстати, как раз Дирихле и предложил то определение функции, которое было
+ сформулировано в самом начале, и было это в 1837 году (Пушкин немного недожил).
+ До этого понятие функции трактовалось по разному.
+ Некоторые, например, считали, что функция -- это такое соответствие между
+ величинами, которое может быть выражено аналитической формулой.
+ При этом получается, что введённые выше функции 
+\begin_inset Formula $\pi\left(x\right)$
+\end_inset
+
+ и 
+\begin_inset Formula $j\left(x\right)$
+\end_inset
+
+ под это определение не попадают.
+ Другие связывали функцию с тракеторией движения тела, т.е.
+ зависимостью ординаты движущейся точки от абсциссы; но функцию Дирихле
+ в таком виде тоже не очень-то представишь.
+\end_layout
+
+\begin_layout Standard
+Как известно, физики очень любят изображать всё, что можно, в виде красивых
+ картинок, потому что это всегда более наглядно, чем циферки и буковки.
+ Так вот, функции можно изображать в виде графиков.
+ График функции рисуется в координатной плоскости следующим образом.
+ Берём какое-то число 
+\begin_inset Formula $x$
+\end_inset
+
+, вычисляем значение функции 
+\begin_inset Formula $y=f\left(x\right)$
+\end_inset
+
+, и изображаем на плоскости точку с координатами 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Потом берём другое число 
+\begin_inset Formula $x$
+\end_inset
+
+, делаем то же самое.
+ Потом третье и т.
+ д.
+ Если проделать это для 
+\shape italic
+всех
+\shape default
+ возможных значений 
+\begin_inset Formula $x$
+\end_inset
+
+, то у нас и получится график функции.
+ Обычно это некая кривая.
+ Примеры.
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+
+\backslash
+end{возможный кусок математического ликбеза}
+\end_layout
+
+\begin_layout Standard
+Примеры функций, с графиками: 
+\begin_inset Formula $y=ax+b$
+\end_inset
+
+, 
+\begin_inset Formula $y=|x|$
+\end_inset
+
+, 
+\begin_inset Formula $y=x^{a}$
+\end_inset
+
+, 
+\begin_inset Formula $y=\sin x$
+\end_inset
+
+, 
+\begin_inset Formula $y=\cos x$
+\end_inset
+
+ (кстати, а школьники знают тригонометрию?), 
+\begin_inset Formula $y=a^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+
+\backslash
+begin{возможный кусок математического ликбеза}
+\end_layout
+
+\begin_layout Subsubsection*
+Степень с действительным показателем
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Все умеют возводить числа в отрицательную и в рациональную степень: 
+\begin_inset Formula $x^{-n}=\frac{1}{x^{n}}$
+\end_inset
+
+, 
+\begin_inset Formula $x^{\frac{m}{n}}=\sqrt[n]{x^{m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Покажем, как возводить числа в иррациональную степень, на примере числа
+ 
+\begin_inset Formula $2^{\sqrt{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Известно, что иррациональное число записывается в виде бесконечной десятичной
+ дроби.
+ Например, 
+\begin_inset Formula $\sqrt{2}=1.4142135623731\dots$
+\end_inset
+
+ Отбросив все цифры, кроме первых нескольких, можно приблизить его рациональным
+ числом.
+ Например, с точностью до сотых 
+\begin_inset Formula $\sqrt{2}\approx1.41=\frac{141}{100}$
+\end_inset
+
+.
+ Более точно, 
+\begin_inset Formula $\sqrt{2}\approx1.414=\frac{1414}{1000}$
+\end_inset
+
+.
+ Так можно продолжать до бесконечности, получая всё более и более точные
+ приближения.
+\end_layout
+
+\begin_layout Standard
+Теперь мы можем приблизительно посчитать, чему равно 
+\begin_inset Formula $2^{\sqrt{2}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+2^{\sqrt{2}}\approx2^{1.4}=2^{\frac{14}{10}}=\sqrt[10]{2^{14}}\approx2.639\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Более точно,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+2^{\sqrt{2}}\approx2^{1.41}=2^{\frac{141}{100}}=\sqrt[100]{2^{141}}\approx2.657\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ещё более точно,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+2^{\sqrt{2}}\approx2^{1.414}\approx2.6647\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+2^{\sqrt{2}}\approx2^{1.4142}\approx2.66512\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Продолжая в том же духе, мы всё точнее и точнее вычисляем искомое число
+ 
+\begin_inset Formula $2^{\sqrt{2}}=2.6651441426902\dots$
+\end_inset
+
+ Причём можно заметить, что число правильно вычисленных цифр после запятой
+ в десятичной дроби для 
+\begin_inset Formula $2^{\sqrt{2}}$
+\end_inset
+
+ равно числу цифр после запятой в соответствующем приближённом значении
+ для 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+.
+ Другими словами, записав 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ с точностью до 3 цифр после запятой, мы получим 
+\begin_inset Formula $2^{\sqrt{2}}$
+\end_inset
+
+ тоже с точностью до 3 цифр.
+ Записывая достаточное количество цифр после запятой в числе 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+, мы сможешь вычислить 
+\begin_inset Formula $2^{\sqrt{2}}$
+\end_inset
+
+ с любой точностью.
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+
+\backslash
+end{возможный кусок математического ликбеза}
+\end_layout
+
+\begin_layout Standard
+В дальнейшем мы будем иметь дело в основном с элементарными функциями, т.е.
+ функциями, которые можно записать в виде формулы, содержащей сложение,
+ вычитание, умножение, деление, возведение в степень и, возможно, синусы,
+ косинусы и логарифмы.
+ Разумеется, далеко не все функции являются элементарными, но с ними как-то
+ проще.
+\end_layout
+
+\begin_layout Part
+Производная
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Рассмотрим 
+\begin_inset Quotes eld
+\end_inset
+
+механическую
+\begin_inset Quotes erd
+\end_inset
+
+ трактовку функции: пусть материальная точка движется так, что в момент
+ времени 
+\begin_inset Formula $t$
+\end_inset
+
+ её координата равна 
+\begin_inset Formula $f(t)$
+\end_inset
+
+.
+ Конечно, некоторые функции нельзя так представить, например функцию Дирихле.
+ Но к таким функциям понятие производной неприменимо, так что в данном случае
+ мы вправе так поступать.
+\end_layout
+
+\begin_layout Standard
+Нарисуем её график (картинко).
+\end_layout
+
+\begin_layout Standard
+Средней скоростью на промежутке времени от 
+\begin_inset Formula $t$
+\end_inset
+
+ до 
+\begin_inset Formula $t+\Delta t$
+\end_inset
+
+ называется выражение 
+\begin_inset Formula $\frac{x\left(t+\Delta t\right)-x\left(t\right)}{\Delta t}$
+\end_inset
+
+.
+ На графике -- это отношение вот этих двух отрезков.
+\end_layout
+
+\begin_layout Standard
+Теперь рисуем секущую и гокорим, что угловой коэффициент равен средней скорости.
+\end_layout
+
+\begin_layout Standard
+Потом переходим к мгновенной скорости и производной.
+ Говорим про касательную и про 
+\begin_inset Quotes eld
+\end_inset
+
+наклон графика в данной точке
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+C'\sim\frac{C-C}{\Delta x}=0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+x'\sim\frac{x+\Delta x-x}{\Delta x}=1\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(ax\right)'\sim\frac{a\left(x+\Delta x\right)-ax}{\Delta x}=a\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(x^{2}\right)'\sim\frac{\left(x+\Delta x\right)^{2}-x^{2}}{\Delta x}=\frac{2x\Delta x+\Delta x^{2}}{\Delta x}=2x+\Delta x\rightarrow2x\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(\frac{1}{x}\right)\sim\frac{\frac{1}{x+\Delta x}-\frac{1}{x}}{\Delta x}=\frac{x-\left(x+\Delta x\right)}{\Delta x\cdot x\left(x+\Delta x\right)}=-\frac{1}{x\left(x+\Delta x\right)}\rightarrow-\frac{1}{x^{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(\sqrt{x}\right)'\sim\frac{\sqrt{x+\Delta x}-\sqrt{x}}{\Delta x}=\frac{\sqrt{x+\Delta x}-\sqrt{x}}{\left(\sqrt{x+\Delta x}\right)^{2}-\left(\sqrt{x}\right)^{2}}=\left(\frac{\left(\sqrt{x+\Delta x}\right)^{2}-\left(\sqrt{x}\right)^{2}}{\sqrt{x+\Delta x}-\sqrt{x}}\right)^{-1}=\left|\begin{array}{c}
+\sqrt{x}=y\\
+\sqrt{x+\Delta x}-\sqrt{x}=\Delta y\end{array}\right|=\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+=\left(\frac{\left(y+\Delta y\right)^{2}-y^{2}}{\Delta y}\right)^{-1}\rightarrow\frac{1}{2y}=\frac{1}{2\sqrt{x}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(x^{a}\right)'=ax^{a-1}-пока\,поверьте\,на\,слово\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(a^{x}\right)'\sim\frac{a^{x+\Delta x}-a^{x}}{\Delta x}=\frac{a^{x}a^{\Delta x}-a^{x}}{\Delta x}=\frac{a^{\Delta x}-a^{0}}{\Delta x}a^{x}=f'\left(0\right)a^{x}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Число 
+\begin_inset Formula $e$
+\end_inset
+
+ -- такое число, что у показательной функции производная в нуле равна 1,
+ т.е.
+ касательная параллельна прямой 
+\begin_inset Formula $y=x$
+\end_inset
+
+.
+ Производная от 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ не пропорциональна, а просто равна самой функции.
+\end_layout
+
+\begin_layout Standard
+Далее, 
+\begin_inset Formula $a=e^{\ln a}$
+\end_inset
+
+, 
+\begin_inset Formula $a^{x}=e^{x\cdot\ln a}$
+\end_inset
+
+.
+ Начинаем сначала:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(a^{x}\right)'=\frac{a^{x+\Delta x}-a^{x}}{\Delta x}=\frac{e^{\left(x+\Delta x\right)\ln a}-e^{x\,\ln a}}{\Delta x}=\left|\begin{array}{c}
+x\,\ln a=y\\
+\Delta x\,\ln a=\Delta y\end{array}\right|=\frac{e^{y+\Delta y}-e^{y}}{\Delta y}\ln a\rightarrow\left(e^{y}\right)'\ln a=a^{x}\ln a\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(\log_{a}x\right)'\sim\frac{\log_{a}\left(x+\Delta x\right)-\log_{a}x}{\Delta x}=\left(\frac{a^{\log_{a}\left(x+\Delta x\right)}-a^{\log_{a}x}}{\log_{a}\left(x+\Delta x\right)-\log_{a}x}\right)^{-1}=\left|\begin{array}{c}
+\log_{a}x=y\\
+\log_{a}\left(x+\Delta x\right)-\log_{a}x=\Delta y\end{array}\right|=\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+=\left(\frac{a^{y+\Delta y}-a^{y}}{\Delta y}\right)^{-1}\rightarrow\frac{1}{a^{y}\ln a}=\frac{1}{x\ln a}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(\sin\, x\right)'\sim\frac{\sin\left(x+\Delta x\right)-\sin x}{\Delta x}=\frac{2\,\sin\frac{\Delta x}{2}\cdot\cos\left(x+\frac{\Delta x}{2}\right)}{\Delta x}=sinc\left(\frac{\Delta x}{2}\right)\cdot\cos\left(x+\frac{\Delta x}{2}\right)\rightarrow\cos\, x\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(\cos x\right)'\sim\frac{\cos\left(x+\Delta x\right)-\cos x}{\Delta x}=\frac{-2\,\sin\frac{\Delta x}{2}\cdot\sin\left(x+\frac{\Delta x}{2}\right)}{\Delta x}=-sinc\left(\frac{\Delta x}{2}\right)\cdot\cos\left(x+\frac{\Delta x}{2}\right)\rightarrow-\sin x\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(f\left(x\right)+g\left(x\right)\right)'\sim\frac{f\left(x+\Delta x\right)+g\left(x+\Delta x\right)-f\left(x\right)-g\left(x\right)}{\Delta x}=\frac{f\left(x+\Delta x\right)-f\left(x\right)}{\Delta x}+\frac{g\left(x+\Delta x\right)-g\left(x\right)}{\Delta x}=f'\left(x\right)+g'\left(x\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(f\left(x\right)g\left(x\right)\right)'\sim\frac{f\left(x+\Delta x\right)g\left(x+\Delta x\right)-f\left(x\right)g\left(x\right)}{\Delta x}=\frac{\left(f\left(x\right)+\Delta f\right)\left(g\left(x\right)+\Delta g\right)-f\left(x\right)g\left(x\right)}{\Delta x}=\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+=\frac{\Delta f\cdot g\left(x\right)+f\left(x\right)\cdot\Delta g+\Delta f\Delta g}{\Delta x}=\frac{\Delta f}{\Delta x}g\left(x\right)+f\left(x\right)\frac{\Delta g}{\Delta x}+\frac{\Delta f}{\Delta x}\left(g\left(x+\Delta x\right)-g\left(x\right)\right)\rightarrow f'g+fg'+0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(f\left(g\left(x\right)\right)\right)'\sim\frac{f\left(g\left(x+\Delta x\right)\right)-f\left(g\left(x\right)\right)}{\Delta x}=\frac{f\left(g\left(x\right)+\Delta g\right)-f\left(g\left(x\right)\right)}{\Delta x}=\frac{f\left(g\left(x\right)+\Delta g\right)-f\left(g\left(x\right)\right)}{\Delta g}\frac{\Delta g}{\Delta x}\rightarrow f'\left(g\left(x\right)\right)g'\left(x\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Асимптотические формулы и формула Тейлора
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Запишем выражение для производной с переобозначением 
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+ и 
+\begin_inset Formula $\Delta x\rightarrow\epsilon$
+\end_inset
+
+ (Вы спросите, почему 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+? А всё-таки какой же это нахрен матан был бы, совсем без 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+f'\left(x_{0}\right)\approx\frac{f\left(x_{0}+\epsilon\right)-f\left(x_{0}\right)}{\epsilon}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Умножив обе части на 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ и перенеся 
+\begin_inset Formula $f\left(x_{0}\right)$
+\end_inset
+
+ в правую часть, получим
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+f\left(x_{0}+\epsilon\right)\approx f\left(x_{0}\right)+f'\left(x_{0}\right)\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом, зная значение функции и её производной в точке 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, можно приближённо вычислять значения функции в точках 
+\begin_inset Formula $x_{0}+\epsilon$
+\end_inset
+
+ при малых 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Здесь рисуем картинку, как график функции уклоняется от касательной.
+\end_layout
+
+\begin_layout Standard
+Вспоминая формулы для производных, можно сходу записать:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left(1+\epsilon\right)^{a}\approx1+a\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\frac{1}{1+\epsilon}\approx1-\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+e^{\epsilon}\approx1+\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+ln\left(1+\epsilon\right)\approx\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь посмотрим, что можно сказать о погрешности этих формул.
+\end_layout
+
+\begin_layout Standard
+Погрешность равна
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+h=\left|f\left(x_{0}\right)+f'\left(x_{0}\right)\epsilon-f\left(x+\epsilon\right)\right|=\left|f'\left(x_{0}\right)-\frac{f\left(x+\epsilon\right)-f\left(x\right)}{\epsilon}\right|\epsilon\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Видно, что если 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ -- 
+\begin_inset Quotes eld
+\end_inset
+
+бесконечно малая
+\begin_inset Quotes erd
+\end_inset
+
+ величина, то выражение под модулем тоже является 
+\begin_inset Quotes eld
+\end_inset
+
+бесконечно малым
+\begin_inset Quotes erd
+\end_inset
+
+ (поскольку это разность между значением производной и расчётной формулой
+ для неё).
+ Получается, что отношение 
+\begin_inset Formula $\frac{h}{\epsilon}$
+\end_inset
+
+ является бесконечно малой величиной.
+\end_layout
+
+\begin_layout Standard
+Если отношение двух бесконечно малых величин 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ и 
+\begin_inset Formula $\beta$
+\end_inset
+
+ бесконечно мало, то говорят, что величина 
+\begin_inset Formula $\beta$
+\end_inset
+
+ -- бесконечна малая 
+\shape italic
+более высокого порядка
+\shape default
+, чем 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Это обозначается так: 
+\begin_inset Formula $\beta=o\left(\alpha\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Таким образом, можно сказать, что погрешность всех приведённых выше формул
+ есть 
+\begin_inset Formula $o\left(\epsilon\right)$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+А попробуем записать формулу для косинуса.
+ Получится 
+\begin_inset Formula $cos\,\epsilon\approx1$
+\end_inset
+
+ WTF? А оказывается, что для косинуса формула вот такая: 
+\begin_inset Formula $cos\,\epsilon\approx1-\frac{\epsilon^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Вообще, оказывается, что все вышенаписаные формулы можно продолжить.
+ Там везде записаны линейные двучлены, а можно записать более точные формулы
+ с многочленами более высокой степени.
+\end_layout
+
+\begin_layout Plain Layout
+Например: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula \[
+\left(1+\epsilon\right)^{a}=1+a\epsilon+\frac{a\left(a-1\right)}{2}\epsilon^{2}+\frac{a\left(a-1\right)\left(a-2\right)}{6}\epsilon^{3}+\dots\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula \[
+e^{\epsilon}=1+\epsilon+\frac{\epsilon^{2}}{2}+\frac{\epsilon^{3}}{6}+\dots\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula \[
+sin\,\epsilon=\epsilon-\frac{\epsilon^{3}}{6}+\frac{\epsilon^{5}}{120}-\dots\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula \[
+cos\,\epsilon=1-\frac{\epsilon^{2}}{2}+\frac{\epsilon^{4}}{24}-\frac{\epsilon^{6}}{720}+\dots\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Откуда берутся такие коэффициенты перед степенями 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ -- долгая история.
+ Из этих формул видно, что погрешность приблизительно пропорциональна 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ в степени 2 или выше.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
