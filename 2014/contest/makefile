@@ -1,12 +1,9 @@
-DocName = "contest"
-
+# PLEASE DO NOT USE latex -> ps -> pdf WAY,
+# YOUR PDF FILES WILL NOT BE SEARCHABLE
 t:
-	latex --src $(DocName).tex
-	dvips $(DocName).dvi
+	pdflatex --src contest.tex
 	pdflatex --src rules.tex
-p: t
-	gs -sDEVICE=pdfwrite -sOutputFile=$(DocName).pdf -r1200 -dNOPAUSE -dBATCH -g9912x14028 $(DocName).ps
-all: p
+all: t
 	cp rules.pdf pravila-olimpiada-fizlesh-contest-2014-2015.pdf
 	cp contest.pdf usloviya-olimpiada-fizlesh-contest-2014-2015.pdf
 c clean:
