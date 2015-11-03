@@ -4,7 +4,7 @@ t:
 	pdflatex --src contest.tex
 	pdflatex --src rules.tex
 all: t
-	cp rules.pdf pravila-olimpiada-fizlesh-contest-2015-2015.pdf
-	cp contest.pdf usloviya-olimpiada-fizlesh-contest-2015-2015.pdf
+	cp rules.pdf pravila-olimpiada-fizlesh-contest-2015-2016.pdf
+	cp contest.pdf usloviya-olimpiada-fizlesh-contest-2015-2016.pdf
 c clean:
 	rm -f *.dvi *.aux *.log *.out
